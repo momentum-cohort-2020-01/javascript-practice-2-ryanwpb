@@ -3,9 +3,15 @@
 // For example, `remove(['Cadence', 'Ordel', 'Marion'], 'Marion')` results
 // in `['Cadence', 'Ordel']`.
 
-remove = arr => {
-  arr.pop();
-  return arr;
+remove = (arr, member) => {
+  let arrCopy = arr.slice();
+  console.log(arrCopy);
+  for (let i = 0; i < arr.length; i++) {
+    if (arrCopy[i] === member) {
+      arrCopy.splice(i, 1);
+    }
+  }
+  return arrCopy;
 };
 
 //
