@@ -34,14 +34,18 @@ average = arr => {
   let total = 0;
   for (let i = 0; i < arr.length; i++) {
     total += arr[i];
-    console.log(total);
   }
   return total / arr.length;
 };
 
 // 5. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
-
+minimum = arr => {
+  if (arr.length === 0) {
+    return;
+  }
+  return Math.min(...arr);
+};
 // 6. There are many techniques to sort arrays in programming. Your programming
 // language will likely include the ability to do this. We are going to
 // implement sorting ourselves, however.
