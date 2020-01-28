@@ -2,8 +2,10 @@
 // member of the array, and returns a new array with that member removed.
 // For example, `remove(['Cadence', 'Ordel', 'Marion'], 'Marion')` results
 // in `['Cadence', 'Ordel']`.
+
 remove = arr => {
-  console.log(arr);
+  arr.pop();
+  return arr;
 };
 
 //
@@ -48,6 +50,7 @@ minimum = arr => {
   }
   return min;
 };
+
 // 6. There are many techniques to sort arrays in programming. Your programming
 // language will likely include the ability to do this. We are going to
 // implement sorting ourselves, however.
