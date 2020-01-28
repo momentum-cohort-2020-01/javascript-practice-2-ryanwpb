@@ -3,9 +3,7 @@
 // For example, `remove(['Cadence', 'Ordel', 'Marion'], 'Marion')` results
 // in `['Cadence', 'Ordel']`.
 remove = arr => {
-  arrCopy = arr.slice();
-  arrCopy.pop();
-  return arr;
+  console.log(arr);
 };
 
 //
@@ -41,10 +39,14 @@ average = arr => {
 // 5. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
 minimum = arr => {
-  if (arr.length === 0) {
-    return;
+  let min = arr[0];
+  for (let i = 0; i < arr.length; ) {
+    if (min > arr[i]) {
+      min = arr[i];
+      i++;
+    } else i++;
   }
-  return Math.min(...arr);
+  return min;
 };
 // 6. There are many techniques to sort arrays in programming. Your programming
 // language will likely include the ability to do this. We are going to
