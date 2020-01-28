@@ -27,6 +27,17 @@ sum = arr => {
 
 // 4. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
+average = arr => {
+  if (arr.length === 0) {
+    return;
+  }
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    total += arr[i];
+    console.log(total);
+  }
+  return total / arr.length;
+};
 
 // 5. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
