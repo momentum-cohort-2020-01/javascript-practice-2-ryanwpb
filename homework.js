@@ -18,7 +18,11 @@ remove = arr => {
 // 3. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
 sum = arr => {
-  return arr + Math.round(arr);
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    total = total + arr[i];
+  }
+  return total;
 };
 
 // 4. Create a function called "average" that takes an array of numbers
