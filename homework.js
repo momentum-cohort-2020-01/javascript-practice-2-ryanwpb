@@ -5,7 +5,6 @@
 
 remove = (arr, member) => {
   let arrCopy = arr.slice();
-  console.log(arrCopy);
   for (let i = 0; i < arr.length; i++) {
     if (arrCopy[i] === member) {
       arrCopy.splice(i, 1);
@@ -69,6 +68,7 @@ minimum = arr => {
 //
 // Create a function called selectionSort that takes an array of numbers and returns
 // a sorted array using the above technique.
+
 //
 // Note 1: You do not actually want to delete things from the original array. You
 // should copy it first. To copy an array, use the following code:
@@ -80,6 +80,31 @@ minimum = arr => {
 // Note 2: Selection sort can be implemented using one array. Read the explanation at
 // https://courses.cs.vt.edu/csonline/Algorithms/Lessons/SelectionSort/index.html
 // to see how. This may make more sense to you.
+
+let array = [9, 2, 5, 6, 4, 3, 7, 10, 1, 8];
+
+// swap function helper
+function swap(array, i, j) {
+  var temp = array[i];
+  array[i] = array[j];
+  array[j] = temp;
+}
+
+function selectionSort(array) {
+  for (var i = 0; i < array.length; i++) {
+    var min = i;
+    for (var j = i + 1; j < array.length; j++) {
+      if (array[j] < array[min]) {
+        min = j;
+      }
+    }
+    if (i !== min) {
+      swap(array, i, min);
+    }
+  }
+  console.log(array);
+  return array;
+}
 
 // 7. Create a function called `textList` that takes an array and joins its elements
 // into a string separated by commas.
