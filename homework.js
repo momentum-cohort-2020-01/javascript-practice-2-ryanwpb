@@ -107,7 +107,7 @@ function selectionSort(array) {
 
 function textList(array) {
   let str = "";
-  for (var i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     str += "string" + i + ", ";
     console.log(str);
   }
