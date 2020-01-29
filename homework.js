@@ -81,27 +81,21 @@ minimum = arr => {
 // https://courses.cs.vt.edu/csonline/Algorithms/Lessons/SelectionSort/index.html
 // to see how. This may make more sense to you.
 
-// swap function helper
-function swap(array, i, j) {
-  var temp = array[i];
-  array[i] = array[j];
-  array[j] = temp;
-}
-
-function selectionSort(array) {
-  for (var i = 0; i < array.length; i++) {
-    var min = i;
-    for (var j = i + 1; j < array.length; j++) {
-      if (array[j] < array[min]) {
-        min = j;
-      }
-    }
-    if (i !== min) {
-      swap(array, i, min);
-    }
+// Step 1 − Set MIN to location 0
+// Step 2 − Search the minimum element in the list
+// Step 3 − Swap with value at location MIN
+// Step 4 − Increment MIN to point to next element
+// Step 5 − Repeat until list is sorted
+function selectionSort(arr) {
+  let min = arr[0];
+  for (let i = 0; i < arr.length; ) {
+    if (min > arr[i]) {
+      min = arr[i];
+      i++;
+    } else i++;
   }
-  console.log(array);
-  return array;
+
+  return min;
 }
 
 // 7. Create a function called `textList` that takes an array and joins its elements
