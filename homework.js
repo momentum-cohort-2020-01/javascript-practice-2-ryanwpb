@@ -106,6 +106,10 @@ function selectionSort(array) {
 // `"Cadence,Ordel,Marion"`.
 
 function textList(array) {
-  array.join();
+  let str = "";
+  for (var i = 0; i < array.length; i++) {
+    str += "stuff" + i + ", ";
+    console.log(str);
+  }
   return array;
 }
