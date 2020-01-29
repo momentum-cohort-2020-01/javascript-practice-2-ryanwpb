@@ -104,3 +104,8 @@ function selectionSort(array) {
 //
 // For example, `textList(['Cadence', 'Ordel', 'Marion'])` results in the string
 // `"Cadence,Ordel,Marion"`.
+
+function textList(array) {
+  array.join();
+  return array;
+}
