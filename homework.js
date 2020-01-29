@@ -86,16 +86,17 @@ minimum = arr => {
 // Step 3 − Swap with value at location MIN
 // Step 4 − Increment MIN to point to next element
 // Step 5 − Repeat until list is sorted
-function selectionSort(arr) {
-  let min = arr[0];
-  for (let i = 0; i < arr.length; ) {
-    if (min > arr[i]) {
-      min = arr[i];
-      i++;
-    } else i++;
-  }
 
-  return min;
+const array = [9, 2, 5, 6, 4, 3, 7, 10, 1, 8];
+
+function selectionSort(array) {
+  for (let i = 0; i < array.length; i++) {
+    let min = i;
+    if (min > array[i]) {
+      min = array[0];
+    }
+  }
+  return array;
 }
 
 // 7. Create a function called `textList` that takes an array and joins its elements
